@@ -1,0 +1,30 @@
+IDE Entry Test Github Repository: https://github.com/auliamnaufal/ide_entry_test
+
+Step-by-step cara membuat pull request baru mulai dari pembuatan branch baru.
+
+n.b. sebagai konteks, kita sudah memiliki remote repository, local repository yang telah di inisialisasi dengan 1 commit.
+
+1. Step pertama, adalah kita harus membuat branch baru dengan nama yang sesuai perubahan yang akan kita buat, entah itu fitur baru, menyelesaikan bug, atau hal lainnya dengan kode berikut:
+	`git checkout -b feature/pemahaman_github_02`
+
+2. karena kita menggunakan perintah checkout -b, maka kita akan dibuatkan branch baru sekaligus pindah ke branch baru tersebut. Step selanjutnya adalah membuat perubahan dan mengcommit perubahan tersebut menggunakakn kode berikut:
+	- Buat perubahan di branch baru
+	- Pindahkan perubahan ke staging stage lalu commit setelahnya
+
+	```
+		git add .
+		git commit -m '(feat): Membuat cara buat pull request pada github repository'
+	```
+
+3. Setelah selesai di commit perubahannya, kita dapat mengupload perubahan tersebut ke github repository menggunakan kode berikut.
+	`git push origin feature/pemahaman_github_02`
+
+4. Jika berhasil mengaupload branch baru ke remote repository, kita dapat menekan tombol "create new pull request" untuk membuat pull request baru
+
+5. Setelah itu kita bisa tentukan akan kemana perubahan ini terjadi, sebagai contoh di tutorial ini, kita akan biarkan secara default yaitu branch "feature/pemahaman_github_02" akan dibuatkan pull request ke branch "master"
+
+6. Apabila semuanya kelihatan benar, maka kita bisa tekan tombol "Create Pull Request"
+
+7. Setelah berhasil dibuat pull requestnya, bila kita punya otoritas untuk menggabungkan/merge perubahan ke branch yang dituju, kita bisa tekan tombol "confirm merge" untuk mengkonfirmasi penggabungan/merge dari branch 'feature/pemahaman_github_02' ke branch 'master'
+
+
