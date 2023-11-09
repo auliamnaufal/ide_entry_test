@@ -1,0 +1,73 @@
+Jika sebuah project laravel ingin dikoneksikan ke 2 database yang berbeda, maka kita harus mengubah file config/database.php dengan menambahkan connection baru pada object "connections" sebagai contoh dari yang sebelumnya seperti code berikut:
+
+```
+<?php
+
+return [
+    'default' => 'mysql',
+
+    'connections' => [
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => 3306,
+            'database' => 'laravel',
+            'username' => 'homestead',
+            'password' => 'secret',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+    ],
+];
+```
+
+kita tambahkan 1 object baru pada object connections kira-kira menjadi seperti kode berikut:
+
+```
+<?php
+
+return [
+    'default' => 'mysql',
+
+    'connections' => [
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => 3306,
+            'database' => 'laravel',
+            'username' => 'homestead',
+            'password' => 'secret',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+
+        'mysql2' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => 3307,
+            'database' => 'laravel2',
+            'username' => 'homestead',
+            'password' => 'secret',
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+    ],
+];
+```
+
+setelah ditambahkannya connection baru pada object "connection", kita dapat menggunakan database baru dengan kode berikut:
+
+```
+DB::connection('mysql2')->table('users')->get();
+```
+
+Dalam code diatas, kita menspesifikasikan dari database mana table "users" didapatkan, dalam hal ini "mysql2". Dengan begitu, data yang didapatkan akan sesuai dengan data yang ada di database "mysql2"

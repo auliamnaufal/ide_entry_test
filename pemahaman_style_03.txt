@@ -1,0 +1,1 @@
+Syntax CSS yang digunakan di soal pemahaman style 02 adalah **CSS NESTING**

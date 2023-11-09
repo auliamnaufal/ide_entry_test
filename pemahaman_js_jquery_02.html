@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pemahaman JS Jquery 01</title>
+  </head>
+  <body>
+    <img
+      id="spinner"
+      src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e475i8cug6a3viw1oesof1oqqivqo2xphtknbk3rhf1&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+    />
+
+    <script>
+      const setLoading = (isShow) => {
+        const spinner = document.getElementById("spinner");
+
+        if (isShow) {
+          spinner.style.display = "none";
+        } else {
+          spinner.style.display = "block";
+        }
+      };
+
+      const fetchApi = () => {
+        setLoading(true);
+        fetch("https://test-ujian-masuk.infraedukasi.com")
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      };
+
+      fetchApi();
+    </script>
+  </body>
+</html>

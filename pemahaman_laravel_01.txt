@@ -1,0 +1,8 @@
+file .env adalah lokasi dimana kredensial dan konfigurasi dari sebuah project laravel berada. Mulai dari nama, port aplikasi, konfigurasi database, dan segala macam hal yang bersifat constant (tidak berubah) dan spesifik ke sebuah project. Data disimpan dalam bentuk variable (key & value) dan nantinya akan diakses dan digunakan oleh project laravel sebagai acuan dan data dalam melakukan sebuah hal.
+
+Sebagai contoh, bila kita ingin mengoneksikan database dengan project laravel, kita bisa masukan database username, password, dan database name kedalam file .env yang disediakan laravel, lalu laravel akan menggunakan data tersebut untuk berkoneksi dengan database tersebut. Dengan begini, bila project dikerjakan oleh banyak orang, kredensial database bisa terjaga & dapat menyesuaikan dengan environment masing-masing.
+
+
+Sementara, config directory adalah tempat untuk menyimpan file-file konfigurasi untuk aplikasi laravelnya. Konfigurasi ini digunakan untuk mengontrol banyak aspek aplikasi seperti caching, database, dan application.
+
+Perbedaan antara .env dan config adalah, .env memiliki sifat yang lebih condong ke hubungan antara developer (environment) dan project, mulai dari kredensial database dan lain-lain. Sementara, config digunakan sebagai acuan aplikasi dalam menjalankan/execute untuk setiap aspek dalam aplikasi.

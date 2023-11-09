@@ -1,0 +1,33 @@
+IDE Entry Test Github Repository: https://github.com/auliamnaufal/ide_entry_test
+
+Step-by-step cara mengupload seluruh file ke remote repository mulai dari meng-clone repository
+
+1. Buat remote repository di github.
+
+2. Clone "ide_entry_test" repository menggunakan `clone URL` repository: 
+	`git clone https://github.com/auliamnaufal/ide_entry_test.git`
+
+3. Setelah repository berhasil di clone, masuk ke directory repo yang baru saja kita clone menggunakan command 'cd' (Sebagai contoh, kita meng-clone repository di root directory):
+	`cd ide_entry_test`
+
+4. Apabila sudah masuk ke 'ide_entry_test' directory, kita bisa langsung memasukan seluruh file yang nantinya akan di push ke remote repository
+
+5. Kalau seluruh file sudah ditambahkan, kita harus memindahkan seluruh file ke staging stage menggunakan kode:
+	`git add .`
+
+6. Bila seluruh file sudah berhasil dipindahkan ke staging stage, kita perlu membuat commit atas perubahan yang telah terjadi pada staging stage menggunakan kode:
+ `git commit -m 'initial commit'`
+
+ * Karena ini adalah commit pertama pada repository 'ide_entry_test', maka commit message-nya adalah initial commit.
+ * Untuk commit-commit setelahnya, harus menyesuaikan dengan perubahan yang terjadi. Biasanya saya menggunakan beberapa git naming convention agar message lebih deskriptif dan mudah dimengerti oleh developer lain.
+	- (feat): message (menjelaskan commit ini berisi feature baru)
+	- (refactor): message (menjelaskan commit ini berisi optimasi penulisan kode)
+	- (chore): message (menjelaskan commit ini berisi kode yang telah dirapihkan atau typo)
+	- (fix): message (menjelaskan commit ini berisi suatu solusi dari sebuah bug)
+	- (style): message (menjelaskan commit ini berhubungan dengan styling dari design aplikasi)
+
+7. Ketika proses commit telah selesai, kita dapat menjalankan kode berikut untuk meng-upload semua perubahan yang telah dicommit ke remote repository (github):
+	`git push -u origin master`
+
+	* "-u" flag digunakan untuk set branch upstream yang berarti, bila kita menjalankan kode `git push` tanpa menspesifikasi `origin master` git akan tahu kemana kode ini akan di push, dalam hal ini branch master
+	

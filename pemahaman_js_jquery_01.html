@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pemahaman JS Jquery 01</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+
+    <script>
+      const names = [
+        "Andi",
+        { Name: "Gunawan", Address: "Jl. Kemerdekaan 01" },
+        "Budi",
+      ];
+
+      const credentials = names[1];
+
+      document.getElementById("demo").innerText = credentials.Name;
+    </script>
+  </body>
+</html>
